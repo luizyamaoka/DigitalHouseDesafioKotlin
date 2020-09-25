@@ -23,12 +23,12 @@ fun main() {
     println("Deveria ser false: ${curso1 == curso2}")
     println("Deveria ser true: ${curso3 == curso2}")
 
-    val professor1 = Professor(1, "Felipe", "Fabregas", 0)
-    val professor2 = Professor(2, "Gabriela", "Giorgi", 0)
-    val professor3 = Professor(3, "Henrique", "Hana", 0)
-    val professor4 = Professor(4, "Indiana", "Iorq", 0)
+    val professor1 = ProfessorTitular(1, "Felipe", "Fabregas", 0, "Fortran")
+    val professor2 = ProfessorTitular(2, "Gabriela", "Giorgi", 0, "Go")
+    val professor3 = ProfessorAdjunto(3, "Henrique", "Hana", 0, 0)
+    val professor4 = ProfessorAdjunto(4, "Indiana", "Iorq", 0, 0)
 
-    val professor5 = Professor(3, "teste", "teste", 0)
+    val professor5 = ProfessorAdjunto(3, "teste", "teste", 0, 0)
 
     println("\n# Professor")
     println("Deveria ser false: ${professor1 == professor2}")
