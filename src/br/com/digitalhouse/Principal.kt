@@ -13,4 +13,12 @@ fun main() {
     println(aluno5 == aluno6)
     println(aluno5 == aluno1)
 
+    val curso1 = Curso(20001, "Full Stack")
+    val curso2 = Curso(20002, "Android")
+
+    val curso3 = Curso(20002, "teste")
+
+    println(curso1 == curso2)
+    println(curso3 == curso2)
+
 }
