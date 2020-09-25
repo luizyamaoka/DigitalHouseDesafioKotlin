@@ -13,4 +13,8 @@ class Curso(val codigo: Int, val nome: String) {
         return true
     }
 
+    override fun toString(): String {
+        return "Curso #$codigo: $nome"
+    }
+
 }

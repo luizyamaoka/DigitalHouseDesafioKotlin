@@ -12,4 +12,8 @@ abstract class Professor(val codigo: Int, val nome: String, val sobrenome: Strin
 
         return true
     }
+
+    override fun toString(): String {
+        return "Professor #$codigo: $nome $sobrenome"
+    }
 }
