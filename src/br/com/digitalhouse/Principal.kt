@@ -5,18 +5,6 @@ fun main() {
     println("\n# Manager")
     val manager = DigitalHouseManager()
 
-    println("\n# Curso")
-
-    manager.registrarCurso(20001, "Full Stack", 3)
-    manager.registrarCurso(20002, "Android", 2)
-    manager.registrarCurso(20003, "Node.js", 10)
-
-    println("${manager.cursos}")
-
-    manager.excluirCurso(20003)
-
-    println("${manager.cursos}")
-
     println("\n# Professor")
 
     manager.registrarProfessorTitular(1, "Felipe", "Fabregas", "Fortran")
@@ -33,6 +21,26 @@ fun main() {
     manager.excluirProfessor(6)
 
     println("${manager.professores}")
+
+    println("\n# Curso")
+
+    manager.registrarCurso(20001, "Full Stack", 3)
+    manager.registrarCurso(20002, "Android", 2)
+    manager.registrarCurso(20003, "Node.js", 10)
+
+    println("${manager.cursos}")
+
+    manager.excluirCurso(20003)
+
+    println("${manager.cursos}")
+
+    println("\n# Alocacao professor")
+
+    manager.alocarProfessores(20001, 1, 3)
+    manager.alocarProfessores(20002, 2, 4)
+
+    println(manager.cursos.first().professorTitular)
+    println(manager.cursos.first().professorAdjunto)
 
     println("\n# Aluno")
 
@@ -53,13 +61,5 @@ fun main() {
     manager.matricularAluno(5, 20002)
 
     println("${manager.matriculas}")
-
-    println("\n# Alocacao professor")
-
-    manager.alocarProfessores(20001, 1, 3)
-    manager.alocarProfessores(20002, 2, 4)
-
-    println(manager.cursos.first().professorTitular)
-    println(manager.cursos.first().professorAdjunto)
 
 }
