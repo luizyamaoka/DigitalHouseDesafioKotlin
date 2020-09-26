@@ -45,4 +45,28 @@ class DigitalHouseManager() {
         }
     }
 
+    fun alocarProfessores(codigoCurso: Int, codigoProfessorTitular: Int, codigoProfessorAdjunto: Int) : Boolean {
+        val curso = cursos.find { it == Curso(codigoCurso, "encontrar", 0) }
+        if (curso == null) {
+            println("Curso com $codigoCurso nao encontrado")
+            return false
+        }
+
+        val professorTitular = professores.find { it is ProfessorTitular && it == ProfessorTitular(codigoProfessorTitular, "", "", 0, "") }
+        if (professorTitular == null) {
+            println("Professor titular com $codigoProfessorTitular nao encontrado")
+            return false
+        }
+
+        val professorAdjunto = professores.find { it is ProfessorAdjunto && it == ProfessorAdjunto(codigoProfessorAdjunto, "", "", 0, 0) }
+        if (professorAdjunto == null) {
+            println("Professor adjunto com $codigoProfessorAdjunto nao encontrado")
+            return false
+        }
+
+        curso.professorAdjunto = professorAdjunto as ProfessorAdjunto
+        curso.professorTitular = professorTitular as ProfessorTitular
+        return true
+    }
+
 }

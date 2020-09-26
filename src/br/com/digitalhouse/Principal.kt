@@ -54,4 +54,12 @@ fun main() {
 
     println("${manager.matriculas}")
 
+    println("\n# Alocacao professor")
+
+    manager.alocarProfessores(20001, 1, 3)
+    manager.alocarProfessores(20002, 2, 4)
+
+    println(manager.cursos.first().professorTitular)
+    println(manager.cursos.first().professorAdjunto)
+
 }

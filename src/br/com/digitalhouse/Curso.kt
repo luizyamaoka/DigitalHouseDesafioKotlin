@@ -2,6 +2,9 @@ package br.com.digitalhouse
 
 class Curso(val codigo: Int, val nome: String, val qtdMaxAlunos: Int) {
 
+    var professorTitular : ProfessorTitular? = null
+    var professorAdjunto : ProfessorAdjunto? = null
+
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
