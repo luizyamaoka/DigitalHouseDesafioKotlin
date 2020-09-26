@@ -15,19 +15,6 @@ fun main() {
     println("Deveria ser true: ${aluno5 == aluno6}")
     println("Deveria ser false: ${aluno5 == aluno1}")
 
-    println("\n# Professor")
-
-    val professor1 = ProfessorTitular(1, "Felipe", "Fabregas", 0, "Fortran")
-    val professor2 = ProfessorTitular(2, "Gabriela", "Giorgi", 0, "Go")
-    val professor3 = ProfessorAdjunto(3, "Henrique", "Hana", 0, 0)
-    val professor4 = ProfessorAdjunto(4, "Indiana", "Iorq", 0, 0)
-
-    val professor5 = ProfessorAdjunto(3, "teste", "teste", 0, 0)
-
-
-    println("Deveria ser false: ${professor1 == professor2}")
-    println("Deveria ser true: ${professor3 == professor5}")
-
 //    println("\n# Matricula")
 //
 //    val matricula1 = Matricula(aluno1, curso1)
@@ -41,17 +28,26 @@ fun main() {
     println("\n# Manager")
     val manager = DigitalHouseManager()
 
+    println("\n# Curso")
+
     manager.registrarCurso(20001, "Full Stack", 3)
     manager.registrarCurso(20002, "Android", 2)
 
     println("${manager.cursos}")
 
-    println(manager.excluirCurso(20001))
+    manager.excluirCurso(20001)
 
     println("${manager.cursos}")
 
-    println(manager.excluirCurso(20004))
+    println("\n# Professor")
 
-    println("${manager.cursos}")
+    manager.registrarProfessorAdjunto(3, "Henrique", "Hana", 0)
+    manager.registrarProfessorAdjunto(4, "Indiana", "Iorq", 0)
+
+    println("${manager.professores}")
+
+    val professor1 = ProfessorTitular(1, "Felipe", "Fabregas", 0, "Fortran")
+    val professor2 = ProfessorTitular(2, "Gabriela", "Giorgi", 0, "Go")
+
 
 }
