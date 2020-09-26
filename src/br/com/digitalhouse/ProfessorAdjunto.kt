@@ -5,5 +5,4 @@ class ProfessorAdjunto(
         nome: String,
         sobrenome: String,
         tempoDeCasa: Int = 0,
-        val qtdHorasMonitoria: Int): Professor(codigo, nome, sobrenome, tempoDeCasa) {
-}
+        val qtdHorasMonitoria: Int): Professor(codigo, nome, sobrenome, tempoDeCasa)
