@@ -2,9 +2,11 @@ package br.com.digitalhouse
 
 class DigitalHouseManager() {
 
-    val alunos = mutableListOf<Aluno>()
-    val professores = mutableListOf<Professor>()
-    val cursos = mutableListOf<Curso>()
-    val matriculas = mutableListOf<Matricula>()
+    val alunos = mutableSetOf<Aluno>()
+    val professores = mutableSetOf<Professor>()
+    val cursos = mutableSetOf<Curso>()
+    val matriculas = mutableSetOf<Matricula>()
+
+    fun registrarCurso(codigo: Int, nome: String, qtdMaxAlunos: Int) = cursos.add(Curso(codigo, nome, qtdMaxAlunos))
 
 }

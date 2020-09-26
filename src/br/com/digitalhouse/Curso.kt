@@ -1,6 +1,6 @@
 package br.com.digitalhouse
 
-class Curso(val codigo: Int, val nome: String) {
+class Curso(val codigo: Int, val nome: String, val qtdMaxAlunos: Int) {
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

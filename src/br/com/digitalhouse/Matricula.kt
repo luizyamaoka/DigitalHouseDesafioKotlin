@@ -8,4 +8,16 @@ class Matricula(val aluno: Aluno, val curso: Curso, val dataMatricula: Date = Da
         return "Matricula($aluno, $curso, data matricula: $dataMatricula)"
     }
 
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Matricula
+
+        if (aluno != other.aluno) return false
+        if (curso != other.curso) return false
+
+        return true
+    }
+
 }
