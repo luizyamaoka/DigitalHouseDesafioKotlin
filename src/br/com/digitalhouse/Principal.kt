@@ -48,4 +48,7 @@ fun main() {
 
     println("$matricula1")
 
+    println("\n# Manager")
+    val manager = DigitalHouseManager()
+
 }
