@@ -19,4 +19,30 @@ class DigitalHouseManager() {
     fun excluirProfessor(codigo: Int) : Boolean = professores.remove(ProfessorAdjunto(codigo, "excluir", "excluir", qtdHorasMonitoria=0))
 
     fun matricularAluno(codigo: Int, nome: String, sobrenome: String) : Boolean = alunos.add(Aluno(codigo, nome, sobrenome))
+
+    fun matricularAluno(codigoAluno: Int, codigoCurso: Int): Boolean {
+        val aluno = alunos.find { it == Aluno(codigoAluno, "encontrar", "encontrar") }
+        if (aluno == null) {
+            println("Aluno com $codigoAluno nao encontrado")
+            return false
+        }
+
+        val curso = cursos.find { it == Curso(codigoCurso, "encontrar", 0) }
+        if (curso == null) {
+            println("Curso com $codigoCurso nao encontrado")
+            return false
+        }
+
+        if (matriculas.find { it.curso == curso && it.aluno == aluno } != null) {
+            println("$aluno ja matriculado no $curso")
+            return false
+        } else if (matriculas.filter { it.curso == curso }.size < curso.qtdMaxAlunos) {
+            println("$aluno matriculado no $curso com sucesso")
+            return matriculas.add(Matricula(aluno, curso))
+        } else {
+            println("Nao ha vagas disponiveis para o $curso")
+            return false
+        }
+    }
+
 }

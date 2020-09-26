@@ -2,16 +2,6 @@ package br.com.digitalhouse
 
 fun main() {
 
-//    println("\n# Matricula")
-//
-//    val matricula1 = Matricula(aluno1, curso1)
-//    val matricula2 = Matricula(aluno2, curso1)
-//    val matricula3 = Matricula(aluno3, curso2)
-//    val matricula4 = Matricula(aluno4, curso2)
-//    val matricula5 = Matricula(aluno5, curso2)
-
-//    println("$matricula1")
-
     println("\n# Manager")
     val manager = DigitalHouseManager()
 
@@ -19,10 +9,11 @@ fun main() {
 
     manager.registrarCurso(20001, "Full Stack", 3)
     manager.registrarCurso(20002, "Android", 2)
+    manager.registrarCurso(20003, "Node.js", 10)
 
     println("${manager.cursos}")
 
-    manager.excluirCurso(20001)
+    manager.excluirCurso(20003)
 
     println("${manager.cursos}")
 
@@ -33,10 +24,13 @@ fun main() {
     manager.registrarProfessorAdjunto(3, "Henrique", "Hana", 0)
     manager.registrarProfessorAdjunto(4, "Indiana", "Iorq", 0)
 
+    manager.registrarProfessorTitular(5, "Julia", "Janarelli", "Go")
+    manager.registrarProfessorAdjunto(6, "Kevin", "Kani", 0)
+
     println("${manager.professores}")
 
-    manager.excluirProfessor(1)
-    manager.excluirProfessor(4)
+    manager.excluirProfessor(5)
+    manager.excluirProfessor(6)
 
     println("${manager.professores}")
 
@@ -49,5 +43,15 @@ fun main() {
     manager.matricularAluno(5, "Elisa", "Eleonora")
 
     println("${manager.alunos}")
+
+    println("\n# Matricula")
+
+    manager.matricularAluno(1, 20001)
+    manager.matricularAluno(2, 20001)
+    manager.matricularAluno(3, 20002)
+    manager.matricularAluno(4, 20002)
+    manager.matricularAluno(5, 20002)
+
+    println("${manager.matriculas}")
 
 }
