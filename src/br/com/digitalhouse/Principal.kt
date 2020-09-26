@@ -48,4 +48,9 @@ fun main() {
 
     println("${manager.professores}")
 
+    manager.excluirProfessor(1)
+    manager.excluirProfessor(4)
+
+    println("${manager.professores}")
+
 }
