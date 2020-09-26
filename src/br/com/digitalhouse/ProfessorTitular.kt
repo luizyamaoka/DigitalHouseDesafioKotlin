@@ -4,6 +4,6 @@ class ProfessorTitular(
         codigo: Int,
         nome: String,
         sobrenome: String,
-        tempoDeCasa: Int,
+        tempoDeCasa: Int = 0,
         val especialidade: String): Professor(codigo, nome, sobrenome, tempoDeCasa) {
 }

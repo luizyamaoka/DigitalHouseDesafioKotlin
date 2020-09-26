@@ -41,13 +41,11 @@ fun main() {
 
     println("\n# Professor")
 
+    manager.registrarProfessorTitular(1, "Felipe", "Fabregas", "Fortran")
+    manager.registrarProfessorTitular(2, "Gabriela", "Giorgi", "Go")
     manager.registrarProfessorAdjunto(3, "Henrique", "Hana", 0)
     manager.registrarProfessorAdjunto(4, "Indiana", "Iorq", 0)
 
     println("${manager.professores}")
-
-    val professor1 = ProfessorTitular(1, "Felipe", "Fabregas", 0, "Fortran")
-    val professor2 = ProfessorTitular(2, "Gabriela", "Giorgi", 0, "Go")
-
 
 }

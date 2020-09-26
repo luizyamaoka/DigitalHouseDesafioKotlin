@@ -13,4 +13,7 @@ class DigitalHouseManager() {
     fun registrarProfessorAdjunto(codigo: Int, nome: String, sobrenome: String, qtdHorasMonitoria: Int) : Boolean =
             professores.add(ProfessorAdjunto(codigo, nome, sobrenome, qtdHorasMonitoria=qtdHorasMonitoria))
 
+    fun registrarProfessorTitular(codigo: Int, nome: String, sobrenome: String, especialidade: String) : Boolean =
+            professores.add(ProfessorTitular(codigo, nome, sobrenome, especialidade=especialidade))
+
 }
