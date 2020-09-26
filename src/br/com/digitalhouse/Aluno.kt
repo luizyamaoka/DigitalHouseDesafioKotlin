@@ -17,4 +17,8 @@ class Aluno(val codigo: Int, val nome: String, val sobrenome: String) {
         return "Aluno #$codigo: $nome $sobrenome"
     }
 
+    override fun hashCode(): Int {
+        return codigo
+    }
+
 }

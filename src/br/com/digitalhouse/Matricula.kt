@@ -20,4 +20,10 @@ class Matricula(val aluno: Aluno, val curso: Curso, val dataMatricula: Date = Da
         return true
     }
 
+    override fun hashCode(): Int {
+        var result = aluno.hashCode()
+        result = 31 * result + curso.hashCode()
+        return result
+    }
+
 }
