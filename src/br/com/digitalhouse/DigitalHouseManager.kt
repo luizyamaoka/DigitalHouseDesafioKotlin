@@ -9,4 +9,6 @@ class DigitalHouseManager() {
 
     fun registrarCurso(codigo: Int, nome: String, qtdMaxAlunos: Int) = cursos.add(Curso(codigo, nome, qtdMaxAlunos))
 
+    fun excluirCurso(codigo: Int) : Boolean = cursos.remove(Curso(codigo, "para excluir", 0))
+
 }

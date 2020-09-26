@@ -46,4 +46,12 @@ fun main() {
 
     println("${manager.cursos}")
 
+    println(manager.excluirCurso(20001))
+
+    println("${manager.cursos}")
+
+    println(manager.excluirCurso(20004))
+
+    println("${manager.cursos}")
+
 }

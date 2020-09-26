@@ -17,4 +17,8 @@ class Curso(val codigo: Int, val nome: String, val qtdMaxAlunos: Int) {
         return "Curso #$codigo: $nome"
     }
 
+    override fun hashCode(): Int {
+        return codigo
+    }
+
 }
