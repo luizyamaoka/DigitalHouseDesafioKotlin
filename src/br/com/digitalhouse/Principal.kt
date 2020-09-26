@@ -2,19 +2,6 @@ package br.com.digitalhouse
 
 fun main() {
 
-    println("\n# Aluno")
-
-    val aluno1 = Aluno(1, "Arthur", "Azevedo")
-    val aluno2 = Aluno(2, "Bianca", "Brasil")
-    val aluno3 = Aluno(3, "Carlos", "Carvalho")
-    val aluno4 = Aluno(4, "Danilo", "Dante")
-    val aluno5 = Aluno(5, "Elisa", "Eleonora")
-
-    val aluno6 = Aluno(5, "t", "t")
-
-    println("Deveria ser true: ${aluno5 == aluno6}")
-    println("Deveria ser false: ${aluno5 == aluno1}")
-
 //    println("\n# Matricula")
 //
 //    val matricula1 = Matricula(aluno1, curso1)
@@ -52,5 +39,15 @@ fun main() {
     manager.excluirProfessor(4)
 
     println("${manager.professores}")
+
+    println("\n# Aluno")
+
+    manager.matricularAluno(1, "Arthur", "Azevedo")
+    manager.matricularAluno(2, "Bianca", "Brasil")
+    manager.matricularAluno(3, "Carlos", "Carvalho")
+    manager.matricularAluno(4, "Danilo", "Dante")
+    manager.matricularAluno(5, "Elisa", "Eleonora")
+
+    println("${manager.alunos}")
 
 }

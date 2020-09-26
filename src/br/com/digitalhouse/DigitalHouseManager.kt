@@ -17,4 +17,6 @@ class DigitalHouseManager() {
             professores.add(ProfessorTitular(codigo, nome, sobrenome, especialidade=especialidade))
 
     fun excluirProfessor(codigo: Int) : Boolean = professores.remove(ProfessorAdjunto(codigo, "excluir", "excluir", qtdHorasMonitoria=0))
+
+    fun matricularAluno(codigo: Int, nome: String, sobrenome: String) : Boolean = alunos.add(Aluno(codigo, nome, sobrenome))
 }
